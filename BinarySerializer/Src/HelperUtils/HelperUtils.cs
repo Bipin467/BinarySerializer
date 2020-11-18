@@ -136,7 +136,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, sbyte[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -145,7 +145,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, short[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -154,7 +154,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, char[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -163,7 +163,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, int[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -172,7 +172,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, long[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -181,7 +181,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, float[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -190,7 +190,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, double[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -199,7 +199,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, bool[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -208,7 +208,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, byte[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -217,7 +217,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, ushort[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -226,7 +226,7 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, uint[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }
@@ -235,7 +235,16 @@ namespace BinarySerializer.Src.HelperUtils
 
         public static int WriteBytes(this byte[] dest, int pointer, ulong[] src)
         {
-            for (int i = pointer; i < src.Length; i++)
+            for (int i = 0; i < src.Length; i++)
+            {
+                pointer = WriteBytes(dest, pointer, src[i]);
+            }
+            return pointer;
+        }
+
+        public static int WriteBytes(this byte[] dest, int pointer, decimal[] src)
+        {
+            for(int i = 0; i < src.Length; i++)
             {
                 pointer = WriteBytes(dest, pointer, src[i]);
             }

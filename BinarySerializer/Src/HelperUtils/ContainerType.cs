@@ -15,4 +15,10 @@ namespace BinarySerializer.Src.HelperUtils
         public const byte OBJECT = 4;
         public const byte SERIALIZERDATABSE = 5;
     }
+    public class ArrayType
+    {
+        public const byte UNKNOWN = 0;
+        public const byte MULTIDIMENSIONAL = 1;
+        public const byte JAGGED =2;
+    }
 }

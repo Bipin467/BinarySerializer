@@ -20,7 +20,7 @@ namespace BinarySerializer.Src.SerializerCore
 
         protected int GetSize()
         {
-            return sizeof(ushort) + NameLength;
+            return PrimitiveType.SIZE_OF_USHORT + Name.Length;
         }
 
         public void SetName(string name)
